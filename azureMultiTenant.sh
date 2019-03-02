@@ -9,6 +9,7 @@ ansible-playbook azureCreate.yml
 sleep 2
 ansible-playbook -i hostsAzurePublicIp routingSsh.yml
 read -n 1 -s -r -p "Press any key to continue the Avi Config."
+echo ""
 cd ../aviBootstrap
 ansible-playbook -i hostsAzurePrivate main.yml
 cd ../aviAzure
